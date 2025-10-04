@@ -25,7 +25,7 @@ const playersAsc: Player[] = [...players].sort(
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   const togglePlay = (index: number, audioFile: string) => {
-    console.log("s",audioFile)
+   
     let audio = audioRefs.current[index];
     if (!audio) {
       audio = new Audio(`/audios/${audioFile}.mp3`);
@@ -47,6 +47,31 @@ const playersAsc: Player[] = [...players].sort(
 
   return(
  <>
+
+
+<Card
+    key={100}
+    className="p-4 m-2 shadow-md bg-white text-black my-5"
+  >
+    {/* Left side (name + play icon) */}
+             <div className="flex flex-col items-start gap-2">
+            <span className="font-semibold text-2xl">FUCKERS PALACE</span>
+            {playingIndex === 100 ? (
+              <Pause
+                className="w-6 h-6 cursor-pointer hover:text-red-500 transition"
+                onClick={() => togglePlay(100, "palace")}
+              />
+            ) : (
+              <Play
+                className="w-6 h-6 cursor-pointer hover:text-green-400 transition"
+                onClick={() => togglePlay(100, "palace")}
+              />
+            )}
+          </div>
+
+    {/* <h2 className="font-bold text-8xl text-right">{player.rugnummer}</h2> */}
+  </Card>
+
       {playersAsc.map((player, index) => (
   <Card
     key={index}
