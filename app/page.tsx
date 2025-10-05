@@ -54,16 +54,16 @@ const playersAsc: Player[] = [...players].sort(
     className="p-4 m-2 shadow-md bg-white text-black my-5"
   >
     {/* Left side (name + play icon) */}
-             <div className="flex flex-col items-start gap-2">
+             <div className="flex flex-col items-start gap-4">
             <span className="font-semibold text-2xl">FUCKERS PALACE</span>
             {playingIndex === 100 ? (
               <Pause
-                className="w-6 h-6 cursor-pointer hover:text-red-500 transition"
+                className="w-10 h-10 cursor-pointer hover:text-red-500 transition"
                 onClick={() => togglePlay(100, "palace")}
               />
             ) : (
               <Play
-                className="w-6 h-6 cursor-pointer hover:text-green-400 transition"
+                className="w-10 h-10 cursor-pointer hover:text-green-400 transition"
                 onClick={() => togglePlay(100, "palace")}
               />
             )}
@@ -78,16 +78,16 @@ const playersAsc: Player[] = [...players].sort(
     className="p-4 m-2 shadow-md bg-black text-white grid grid-cols-2 items-center my-5"
   >
     {/* Left side (name + play icon) */}
-             <div className="flex flex-col items-start gap-2">
+             <div className="flex flex-col items-start gap-4">
             <span className="font-semibold text-2xl">{player.naam}</span>
             {playingIndex === index ? (
               <Pause
-                className="w-6 h-6 cursor-pointer hover:text-red-500 transition"
+                className="w-10 h-10 cursor-pointer hover:text-red-500 transition"
                 onClick={() => togglePlay(index, player.audio)}
               />
             ) : (
               <Play
-                className="w-6 h-6 cursor-pointer hover:text-green-400 transition"
+                className="w-10 h-10 cursor-pointer hover:text-green-400 transition"
                 onClick={() => togglePlay(index, player.audio)}
               />
             )}
