@@ -82,12 +82,12 @@ const playersAsc: Player[] = [...players].sort(
             <span className="font-semibold text-2xl">{player.naam}</span>
             {playingIndex === index ? (
               <Pause
-                className="w-10 h-10 cursor-pointer hover:text-red-500 transition"
+                className="w-12 h-12 cursor-pointer hover:text-red-500 transition"
                 onClick={() => togglePlay(index, player.audio)}
               />
             ) : (
               <Play
-                className="w-10 h-10 cursor-pointer hover:text-green-400 transition"
+                className="w-12 h-12 cursor-pointer hover:text-green-400 transition"
                 onClick={() => togglePlay(index, player.audio)}
               />
             )}
